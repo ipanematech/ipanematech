@@ -5,12 +5,13 @@
 html {
   scroll-behavior: smooth;
   @apply text-gray-700;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .highlight {
   background-image: linear-gradient(98deg, rgb(255, 227, 148), rgba(249, 194, 35, 0.55), rgba(247, 191, 33, 0.44));
   border-radius: 6% 15% 19% 27%;
-  padding: 4px;
+  padding: 0 4px;
 }
 
 .header {
@@ -65,11 +66,11 @@ html {
   }
 
   &__clients-logo {
-    @apply mx-auto flex justify-center mt-10;
+    @apply mx-auto flex flex-col items-center justify-center mt-10;
   }
 
   &__clients-icon {
-    @apply w-64 mx-5;
+    @apply w-64 my-5;
   }
 
   &__services {
@@ -215,6 +216,16 @@ html {
 
     &__image {
       @apply w-1/2;
+    }
+  }
+
+  .section {
+    &__clients-logo {
+      @apply flex flex-row;
+    }
+
+    &__clients-icon {
+      @apply mx-5;
     }
   }
 
