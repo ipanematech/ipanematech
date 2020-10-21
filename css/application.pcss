@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  @apply text-gray-700;
+}
+
+.highlight {
+  background-image: linear-gradient(98deg, rgb(255, 227, 148), rgba(249, 194, 35, 0.55), rgba(247, 191, 33, 0.44));
+  border-radius: 6% 15% 19% 27%;
+  padding: 4px;
+}
+
+.header {
+  @apply mx-auto flex flex-wrap px-16 py-8 flex-col items-center;
+
+  &__navigation {
+    @apply flex flex-wrap items-center text-base justify-center;
+  }
+
+  &__navigation-item {
+    @apply mr-5;
+  }
+
+  &__navigation-item:hover {
+    @apply text-gray-900;
+  }
+}
+
+.hero {
+  @apply flex flex-col items-center;
+
+  &__content {
+    @apply flex flex-col mb-16 items-center text-center leading-tight;
+  }
+
+  &__title {
+    @apply text-4xl mb-4 font-medium text-gray-800 font-extrabold;
+  }
+
+  &__description {
+    @apply mb-8 leading-relaxed text-xl;
+  }
+
+  &__image {
+    @apply w-5/6;
+  }
+}
+
+.section {
+  @apply p-10;
+
+  &__title {
+    @apply text-center text-3xl font-bold text-gray-800;
+
+    &_white {
+      @apply text-white;
+    }
+  }
+
+  &__clients {
+    @apply bg-indigo-700 py-20;
+  }
+
+  &__clients-logo {
+    @apply mx-auto flex justify-center mt-10;
+  }
+
+  &__clients-icon {
+    @apply w-64 mx-5;
+  }
+
+  &__services {
+    @apply py-16 mx-auto;
+  }
+
+  &__services-container {
+    @apply flex items-center mx-auto border-b pb-10 mb-10 border-gray-200 flex-col;
+
+    &_last {
+      @apply border-b-0 pb-0 mb-0;
+    }
+  }
+
+  &__services-image-container {
+    @apply h-64 w-64 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-700 flex-shrink-0;
+  }
+
+  &__services-content {
+    @apply flex-grow text-center mt-6;
+  }
+
+  &__services-title {
+    @apply text-gray-900 text-lg font-medium mb-2;
+  }
+
+  &__services-description {
+    @apply leading-relaxed text-base;
+  }
+}
+
+.rounded-image {
+  @apply object-cover object-center rounded;
+}
+
+.footer {
+  @apply text-white bg-indigo-700;
+
+  &__container {
+    @apply px-16 py-8 mx-auto flex items-center flex-col;
+  }
+
+  &__menu {
+    @apply inline-flex mt-4 justify-center;
+  }
+
+  &__menu-item {
+    @apply ml-3 font-bold;
+  }
+
+  &__menu-icon {
+    @apply fill-current text-white;
+  }
+}
+
+.logo {
+  @apply flex font-medium items-center text-gray-900 mb-4 justify-center;
+
+  &__text {
+    @apply ml-3 text-xl font-extrabold;
+  }
+
+  &__image {
+    @apply h-10;
+  }
+}
+
+.button {
+  @apply inline-flex items-center bg-indigo-700 border-0 rounded text-white;
+
+  &_small {
+    @apply text-base py-1 px-3;
+  }
+
+  &_medium {
+    @apply text-lg py-2 px-6;
+  }
+}
+
+.button:focus {
+  @apply outline-none;
+}
+
+.button:hover {
+  @apply bg-indigo-700;
+}
+
+@screen sm {
+  .hero {
+    &__title {
+      @apply text-4xl;
+    }
+  }
+
+  .section {
+    &__services-container {
+      @apply flex-row;
+    }
+
+    &__services-image-container {
+      @apply w-64 h-64;
+
+      &_left {
+        @apply mr-10;
+      }
+
+      &_right {
+        @apply ml-10;
+      }
+    }
+
+    &__services-content {
+      @apply text-left mt-0;
+    }
+  }
+
+  .footer {
+    &__container {
+      @apply flex-row;
+    }
+
+    &__menu {
+      @apply justify-start ml-auto mt-0;
+    }
+  }
+}
+
+@screen md {
+  .header {
+    @apply flex-row;
+
+    &__navigation {
+      @apply ml-auto;
+    }
+  }
+
+  .hero {
+    @apply flex-row;
+
+    &__content {
+      @apply w-1/2 w-1/2 items-start text-left mb-0;
+    }
+
+    &__image {
+      @apply w-1/2;
+    }
+  }
+
+  .logo {
+    @apply mb-0 justify-start;
+  }
+}
+
+@screen lg {
+  .hero {
+    &__content {
+      @apply flex-grow pr-24;
+    }
+
+    &__image {
+      @apply max-w-lg w-full;
+    }
+  }
+
+  .section {
+    &__services-container {
+      @apply w-3/5;
+    }
+  }
+}
